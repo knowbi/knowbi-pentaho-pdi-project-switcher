@@ -67,7 +67,7 @@ then
 	export KETTLE_HOME=$PWD
 	
 	cd ../${KETTLE_DIR}${KETTLE_VERSION}
-	./spoon.sh
+	./spoon.sh $*
 
 else
 #do the folder loop again to find the subprojects
@@ -137,7 +137,7 @@ else
 		export KETTLE_HOME=$PWD	
 
 		cd "../../${KETTLE_DIR}${KETTLE_VERSION}"
-		./spoon.sh
+		./spoon.sh $*
 	else
 		echo "ERROR: could not find subproject"
 		exit
